@@ -1,3 +1,4 @@
+"""test cases"""
 import datetime
 
 from django.test import TestCase
@@ -19,6 +20,8 @@ def create_question(question_text, days):
 
 
 class QuestionIndexViewTests(TestCase):
+    """Test IndexView"""
+
     def test_no_questions(self):
         """
         If no questions exist, an appropriate message is displayed.
@@ -77,6 +80,8 @@ class QuestionIndexViewTests(TestCase):
 
 
 class QuestionDetailViewTests(TestCase):
+    """Test DetailView"""
+
     def test_future_question(self):
         """
         The detail view of a question with a pub_date in the future

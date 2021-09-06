@@ -1,4 +1,4 @@
-name: Pylint
+name: Lint
 
 on: [ push ]
 
@@ -18,7 +18,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install pylint pylint-django django
       - name: Analysing the code with pylint
-        env:
-          DJANGO_SETTINGS_MODULE: admin.settings
-        run: |
-          pylint --load-plugins pylint_django admin polls
+        run: make lint
