@@ -1,0 +1,4 @@
+.idea/
+
+# Django default local db
+db.sqlite3
