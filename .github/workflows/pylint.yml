@@ -21,4 +21,4 @@ jobs:
         env:
           DJANGO_SETTINGS_MODULE: admin.settings
         run: |
-          pylint --load-plugins pylint_django 'ls -R|grep .py$|xargs'
+          pylint --load-plugins pylint_django admin polls
