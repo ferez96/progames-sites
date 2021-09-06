@@ -18,5 +18,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pylint pylint-django
       - name: Analysing the code with pylint
+        env:
+          DJANGO_SETTINGS_MODULE: admin.settings
         run: |
           pylint --load-plugins pylint_django 'ls -R|grep .py$|xargs'
